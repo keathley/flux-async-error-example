@@ -1,0 +1,32 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif; }
+
+input {
+  margin: 0px;
+  outline: 0px none;
+  line-height: 1.2142em;
+  padding: 0.67861em 1em;
+  font-size: 1em;
+  background: none repeat scroll 0% 0% #FFF;
+  border: 1px solid rgba(39, 41, 43, 0.15);
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.2857rem;
+  box-shadow: 0px 0px 0px 0px transparent inset;
+  -webkit-transition: background-color 0.2s ease 0s, color 0.2s ease 0s, box-shadow 0.2s ease 0s, border-color 0.2s ease 0s;
+          transition: background-color 0.2s ease 0s, color 0.2s ease 0s, box-shadow 0.2s ease 0s, border-color 0.2s ease 0s; }
+
+.form-group input {
+  color: rgba(0, 0, 0, 0.85);
+  border-color: rgba(39, 41, 43, 0.3);
+  border-radius: 0px 0.2857rem 0.2857rem 0px;
+  background: none repeat scroll 0% 0% #FFF;
+  box-shadow: 1px 0px 0px 0px rgba(39, 41, 43, 0.3) inset; }
+.form-group.error input {
+  background: none repeat scroll 0% 0% #FFF0F0;
+  border-color: #DBB1B1;
+  color: #D95C5C;
+  border-radius: 0px 0.2857rem 0.2857rem 0px;
+  box-shadow: 2px 0px 0px 0px #D95C5C inset; }

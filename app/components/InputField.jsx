@@ -1,7 +1,7 @@
 var React = require('react')
   , Formsy = require('formsy-react')
 
-var TestInput = React.createClass({
+var InputField = React.createClass({
   mixins: [Formsy.Mixin],
   getInitialState() {
     return { showErrors: false }
@@ -41,40 +41,4 @@ var TestInput = React.createClass({
   }
 });
 
-var TestForm = React.createClass({
-  getInitialState() {
-    return { canSubmit: false }
-  },
-  handleSubmit(data) {
-    console.log(data)
-  },
-  enableButton: function() {
-    this.setState({ canSubmit: true })
-  },
-  disableButton: function() {
-    this.setState({ canSubmit: false })
-  },
-  render: function() {
-    var disabled = !this.state.canSubmit
-
-    return (
-      <Formsy.Form onSubmit={this.handleSubmit}
-                   onValid={this.enableButton}
-                   onInvalid={this.disableButton}>
-        <TestInput name="name"
-                   title="Name"
-                   required />
-        <TestInput name="email"
-                   title="Email"
-                   validations="isEmail"
-                   validationError="This is not a valid email"
-                   required />
-        <button type="submit" disabled={disabled}>
-          Test Submit
-        </button>
-      </Formsy.Form>
-    );
-  }
-});
-
-module.exports = TestForm;
+module.exports = InputField

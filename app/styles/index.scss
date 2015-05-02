@@ -21,6 +21,10 @@ input {
 }
 
 .form-group {
+  label {
+    display: block;
+  }
+
   input {
     color: rgba(0, 0, 0, 0.85);
     border-color: rgba(39, 41, 43, 0.3);
@@ -37,9 +41,53 @@ input {
       border-radius: 0px 0.2857rem 0.2857rem 0px;
       box-shadow: 2px 0px 0px 0px #D95C5C inset;
     }
+
+    span {
+      color: #D95C5C;
+    }
   }
 
   &.required {
 
+  }
+
+  span {
+    display: block;
+  }
+}
+
+button {
+  width: 210px;
+  box-shadow: none;
+  border: 1px solid rgb(83, 173, 215);
+  padding: 10px;
+  background: none repeat scroll 0% 0% rgb(83, 173, 215);
+  border-radius: 4px;
+  margin-top: 7px;
+  color: white;
+  font-size: 14px;
+  border: 1px solid #539BBD;
+  cursor: pointer;
+}
+
+.profile {
+  width: 700px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.group {
+  float: left;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px 30px;
+
+  &:last-child {
+    margin-left: 15px;
+  }
+
+  dd {
+    margin-left: 0;
+    margin-bottom: 20px;
   }
 }

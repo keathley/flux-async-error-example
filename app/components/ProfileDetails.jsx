@@ -11,7 +11,7 @@ var ProfileDetails = React.createClass({
     var email = user.email
 
     return (
-      <div>
+      <section className="group">
         <dt>
           <span>
             Name
@@ -28,7 +28,7 @@ var ProfileDetails = React.createClass({
         <dd>
           {email}
         </dd>
-      </div>
+      </section>
     );
   }
 });

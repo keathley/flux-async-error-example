@@ -29,23 +29,25 @@ var ProfileForm = React.createClass({
     var email = user.email
 
     return (
-      <Formsy.Form onSubmit={this.handleSubmit}
-                   onValid={this.enableButton}
-                   onInvalid={this.disableButton}>
-        <InputField name="name"
-                   title="Name"
-                   value={name}
-                   required />
-        <InputField name="email"
-                   title="Email"
-                   value={email}
-                   validations="isEmail"
-                   validationError="This is not a valid email"
-                   required />
-        <button type="submit" disabled={disabled}>
-          Test Submit
-        </button>
-      </Formsy.Form>
+      <section className="group">
+        <Formsy.Form onSubmit={this.handleSubmit}
+                     onValid={this.enableButton}
+                     onInvalid={this.disableButton}>
+          <InputField name="name"
+                     title="Name"
+                     value={name}
+                     required />
+          <InputField name="email"
+                     title="Email"
+                     value={email}
+                     validations="isEmail"
+                     validationError="This is not a valid email"
+                     required />
+          <button type="submit" disabled={disabled}>
+            Test Submit
+          </button>
+        </Formsy.Form>
+      </section>
     );
   }
 });

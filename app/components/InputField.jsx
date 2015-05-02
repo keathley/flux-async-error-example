@@ -34,7 +34,8 @@ var InputField = React.createClass({
                value={this.getValue()}
                onChange={this.handleChange}
                onBlur={this.handleBlur}
-               onFocus={this.handleFocus} />
+               onFocus={this.handleFocus}
+               autoComplete='off' />
         <span className='validation-error'>{errorMessage}</span>
       </div>
     )

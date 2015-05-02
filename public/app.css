@@ -18,6 +18,8 @@ input {
   -webkit-transition: background-color 0.2s ease 0s, color 0.2s ease 0s, box-shadow 0.2s ease 0s, border-color 0.2s ease 0s;
           transition: background-color 0.2s ease 0s, color 0.2s ease 0s, box-shadow 0.2s ease 0s, border-color 0.2s ease 0s; }
 
+.form-group label {
+  display: block; }
 .form-group input {
   color: rgba(0, 0, 0, 0.85);
   border-color: rgba(39, 41, 43, 0.3);
@@ -30,3 +32,36 @@ input {
   color: #D95C5C;
   border-radius: 0px 0.2857rem 0.2857rem 0px;
   box-shadow: 2px 0px 0px 0px #D95C5C inset; }
+.form-group.error span {
+  color: #D95C5C; }
+.form-group span {
+  display: block; }
+
+button {
+  width: 210px;
+  box-shadow: none;
+  border: 1px solid #53add7;
+  padding: 10px;
+  background: none repeat scroll 0% 0% #53add7;
+  border-radius: 4px;
+  margin-top: 7px;
+  color: white;
+  font-size: 14px;
+  border: 1px solid #539BBD;
+  cursor: pointer; }
+
+.profile {
+  width: 700px;
+  margin: 0 auto;
+  padding-top: 80px; }
+
+.group {
+  float: left;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px 30px; }
+  .group:last-child {
+    margin-left: 15px; }
+  .group dd {
+    margin-left: 0;
+    margin-bottom: 20px; }

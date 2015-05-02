@@ -3,18 +3,34 @@ var Reflux = require('reflux')
 var userActions = require('../actions/UserActions.js')
 
 var UserStore = Reflux.createStore({
+  listenables: userActions,
+
   init: function() {
-    this.profile = { name: 'chris', email: 'chrisk@carbonfive.com' }
-    this.listenTo(userActions.profileUpdate, this.onProfileUpdate)
+    this.profile = {
+      name: 'chris',
+      email: 'chrisk@carbonfive.com',
+      errors: {}
+    }
   },
 
   getInitialState: function() {
     return this.profile
   },
 
-  onProfileUpdate: function(profile) {
-    this.profile = profile
-    this.trigger(profile)
+  onUpdateProfile: function(profile) {
+    console.log(profile)
+  },
+
+  onUpdateProfileCompleted: function(newProfile) {
+    console.log(newProfile)
+    this.profile = newProfile
+    this.trigger(this.profile)
+  },
+
+  onUpdateProfileFailed: function(errors) {
+    console.log(errors);
+    this.profile.errors = errors
+    this.trigger(this.profile)
   }
 })
 
